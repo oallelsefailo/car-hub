@@ -2,6 +2,7 @@ import React from "react";
 import "./ridesExpanded.css"
 import maserati from "../assets/rides_expanded/2023-mc20.jpg"
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function RidesExpanded() {
     const navigate = useNavigate();
