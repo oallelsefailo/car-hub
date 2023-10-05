@@ -29,6 +29,7 @@
   padding: 10px 20px;
   color: #fff;
   text-align: center;
+  white-space: nowrap;
   z-index: 1;
 }
 
@@ -40,9 +41,10 @@
   content: "";
   position: absolute;
   top: 0;
-  right: 35px;
+  right: 0;
+  left: -190px;
   bottom: 0;
-  width: 120%; 
+  width: calc(100% + 170px);
   background-color: rgba(28, 33, 41, 0.7); 
   z-index: -1; 
   transform: skewX(20deg); 
@@ -111,4 +113,16 @@
 
 .giveAway {
   background-image: url('../assets/banners/give-away.png');
+}
+
+@media (max-width: 768px) {
+  .container-wrapper {
+    flex-direction: column;
+  }
+
+  .container {
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
 }
