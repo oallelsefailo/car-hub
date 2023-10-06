@@ -1,6 +1,5 @@
 import React from "react";
 import "./ridesExpanded.css"
-import maserati from "../assets/rides_expanded/2023-mc20.jpg"
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -47,8 +46,10 @@ function RidesExpanded() {
                     </div>
                 </div>
                 <div className="button">
-                    <button onClick={() => navigate('/rides/update')} >Update</button>
+                    <button onClick={() => navigate(`/rides/${ride.id}/update`)} >Update</button>
+                    <form method="POST" action={`/rides/${ride.id}/?_method=DELETE`}>
                     <button>Delete</button>
+                    </form>
                 </div>
             </main>
         </div>
