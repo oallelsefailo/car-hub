@@ -34,7 +34,7 @@ function RidesExpanded() {
         <div>
             <main>
                 <div className="car">
-                    <img id="maserati" src={maserati} />
+                    <img id="carImg" src={ride.photo} alt={`${ride.brand} ${ride.model}`} />
                     <div className="car-data">
                         <h1>{ride.brand}{ride.model}</h1>
                         <ul>
@@ -46,12 +46,6 @@ function RidesExpanded() {
                         </ul>
                     </div>
                 </div>
-                <p className="paragraph-car">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                    pretium urna ipsum, ut consectetur ex feugiat id. Curabitur
-                    venenatis. Cras enim purus, ultrices vitae mauris nec, euismod commodo sapien.
-                    Integer pretium feugiat pretium.
-                </p>
                 <div className="button">
                     <button onClick={() => navigate('/rides/update')} >Update</button>
                     <button>Delete</button>
