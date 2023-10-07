@@ -1,51 +1,21 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./rides.css";
 
 function Rides() {
+  const [rides, setRides] = useState([]);
 
-    const [photo, setPhoto] = useState('')
-    const [brand, setBrand] = useState('')
-    const [model, setModel] = useState('')
-    const [year, setYear] = useState('')
-    const [type, setType] = useState('')
-    const [engine, setEngine] = useState('')
-    const [drivetrain, setDrivetrain] = useState('')
-    const [owner, setOwner] = useState('')
-
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await fetch("/rides", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                photo,
-                brand,
-                model,
-                year,
-                type,
-                engine,
-                drivetrain,
-                owner,
-              }),
-            });
-      
-            if (response.ok) {
-              console.log("Ride Posted Successfully");
-              setPhoto("");
-              setBrand("");
-              setModel("");
-              setYear("");
-              setType("");
-              setEngine("");
-              setDrivetrain("");
-              setOwner("");
-            } else {
-              console.error("Failed to post ride");
+  useEffect(() => {
+    const fetchRides = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/submit_rides");
+        if (response.ok) {
+          const data = await response.json();
+          const ridesWithPlaceholders = data.map((ride) => {
+            if (!ride.photo) {
+              return { ...ride, photo: "https://placekitten.com/200/200" };
             }
+<<<<<<< HEAD
           } catch (error) {
             console.error("Error:", error);
           }
@@ -94,6 +64,46 @@ function Rides() {
             </main>
         </div>
     )
+=======
+            return ride;
+          });
+          setRides(ridesWithPlaceholders);
+        } else {
+          console.error("Failed to fetch rides");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchRides();
+  }, []);
+
+  return (
+    <div className="rides-container">
+      <h1>Rides</h1>
+      <ul className="rides-list">
+        {rides.map((ride) => (
+          <li className="ride-item" key={ride._id}>
+            <Link to={`/rides/${ride._id}`} className="navLink">
+            <img src={ride.photo} alt={`${ride.brand} ${ride.model}`} />
+            <p>Brand: {ride.brand}</p>
+            <p>Model: {ride.model}</p>
+            <p>Year: {ride.year}</p>
+            <p>Type: {ride.type}</p>
+            <p>Engine: {ride.engine}</p>
+            <p>Drivetrain: {ride.drivetrain}</p>
+            <p>Owner: {ride.owner}</p>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <Link to="/rides/submit">
+        <button>Add Yours</button>
+      </Link>
+    </div>
+  );
+>>>>>>> origin/main
 }
 
 export default Rides;

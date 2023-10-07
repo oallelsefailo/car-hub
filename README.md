@@ -26,10 +26,10 @@ Check in on news and sweepstakes!
 ### Backend
 - Node.js
 - MongoDB
+- Express
 
 ## Contributors
 - [Oscar Romero](https://github.com/oromero7153)
 - [Jose Rodrigues](https://github.com/jorodrig96)
 - [Manny Delgado](https://github.com/MannyGDP)
-- [Kelsea](https://github.com/KelseaH)
 - [Brandon Iida](https://github.com/oallelsefailo)

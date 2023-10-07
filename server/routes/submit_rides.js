@@ -3,7 +3,7 @@ const router = require('express').Router();
 const schemas = require("../models/schemas");
 
 // POST ride
-router.post("/rides", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { photo, brand, model, year, type, engine, drivetrain, owner } =
       req.body;
@@ -29,10 +29,10 @@ router.post("/rides", async (req, res) => {
 });
 
 // GET ride
-router.get("/rides", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const rides = await schemas.Rides.find();
-    res.status(200).json(rides); 
+    res.status(200).json(rides);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error" });
@@ -40,29 +40,30 @@ router.get("/rides", async (req, res) => {
 });
 
 // GET ride by ID
-router.get("/rides/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
-      const rideId = req.params.id;
-      const rideData = await schemas.Rides.findById(rideId);
-      res.status(200).json(rideData);
+    const rideId = req.params.id;
+    const ride = await schemas.Rides.findById(rideId);
+    if (!ride) {
+      return res.status(404).json({ error: "Ride not found" });
+    }
+    res.status(200).json(ride);
   } catch (error) {
       console.error(error);
       res.status(500).json({ error: "Error" });
   }
 });
 
-
 // UPDATE ride
 router.post("/:id/update", async (req, res) => {
   try {
-      const rideId = req.params.id;
-      const updatedRideData = req.body;
-      const updatedRide = await schemas.Rides.findByIdAndUpdate(
-          rideId,
-          updatedRideData,
-          { new: true } // Return the updated ride
-      );
-      res.status(200).json(updatedRide);
+    const rideId = req.params.id;
+    const updatedRide = await schemas.Rides.findByIdAndUpdate(
+      rideId,
+      updatedRideData,
+      { new: true }
+    );
+    res.status(200).json(updatedRide);
   } catch (error) {
       console.error(error);
       res.status(500).json({ error: "Error updating" });
@@ -70,7 +71,7 @@ router.post("/:id/update", async (req, res) => {
 });
 
 //DELETE ride
-router.delete("/rides/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const rideId = req.params.id;
     res.status(200).json({ message: "Ride deleted" });
@@ -79,6 +80,5 @@ router.delete("/rides/:id", async (req, res) => {
     res.status(500).json({ error: "Error deleting" });
   }
 });
-
 
 module.exports = router;
