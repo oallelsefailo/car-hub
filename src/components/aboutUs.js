@@ -10,12 +10,18 @@ export default function AboutEvents(props) {
     const navigate = useNavigate();
 
     return (
-        <><div style={{ display: "flex", flexWrap: "wrap", justifyContent:"center" }}>
+        <>
+        <div>
+            <p><h1>About The Crew</h1></p>
+        </div>
+        
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent:"center" }}>
             {AboutDates.map((element, index) =>
                 <AboutCard
                     key={index}
                     imageURL={element.imageURL}
                     location={element.location}
+                    paragraph={element.paragraph}
                 />)
             }
         </div>

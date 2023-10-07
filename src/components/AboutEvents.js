@@ -16,6 +16,7 @@ export default function AboutEvents(props) {
                     key={index}
                     location={element.location}
                     imageURL={element.imageURL}
+                    paragraph={element.paragraph}
                 />)
             }
         </div>
