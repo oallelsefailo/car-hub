@@ -1,0 +1,29 @@
+.people {
+  display: flex;
+}
+
+#people-box {
+  align-items: left;
+  width: 40vw;
+  height: auto;
+  padding-top: 50px;
+  margin-left: 50px;
+}
+
+.people-data {
+  width: 50%;
+  align-items: right;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.paragraph-people {
+  width: 70%;
+  text-align: left;
+  margin-left: 50px;
+  font-size: 25px;
+}
+
+button {
+  margin: 30px;
+}
