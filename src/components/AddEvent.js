@@ -1,8 +1,9 @@
 import React from "react";
+import "./eventsUpdateDelete.css"
 
 export default function AddEvent () {
     return (
-        <div className="Addeventdiv">
+        <div className="add-event-div">
             <div className= "AddEventInputs">
             <form method="POST" action="/events">
                 <label>Event Name:</label><br />
@@ -14,8 +15,13 @@ export default function AddEvent () {
                 <label>City/State:</label><br />
                     <input type="text" id="CityState" name="CityState" placeholder="City/State"></input><br />
                     <br></br>
-                    <input className="AddEventButton" type="submit" value="Add Event" />
+                    <input className="add-event-button" type="submit" value="Add Event" />
             </form>
+            <div className='add-event-button'>
+                    <a href= "/events">
+                        <button>Back</button>
+                        </a>
+            </div>
             </div>
         </div>
     )

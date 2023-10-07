@@ -19,8 +19,9 @@ function App() {
           <Route path="/rides" element={<Rides />} />
           <Route path="/rides/update" element={<Update />} />
           <Route path="/rides/submit" element={<SubmitRides />} />
-          {/*<Route path="/events" element={<Events />} />
-          <Route path="/about" element={<About />} /> */}
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/events/AddEvent" element={<AddEvent />} />
+          {/*<Route path="/about" element={<About />} /> */}
         </Routes>
         <Footer />
       </div>

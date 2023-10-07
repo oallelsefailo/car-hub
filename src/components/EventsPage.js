@@ -27,8 +27,8 @@ export default function EventsPage (props) {
 
         <div className="button">
             <p>You can also add your own events here!</p>
-                <button onClick={() => navigate('/events/AddEvent')} >Add Event</button>
-                <button>Delete Event</button>
+                <button className= "add-event-button" onClick={() => navigate('/events/AddEvent')} >Add Event</button>
+                <button className="add-event-button">Delete Event</button>
         </div>
         </>
     );
