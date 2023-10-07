@@ -3,12 +3,12 @@ import "./ridesExpanded.css"
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-function RidesExpanded() {
+function RidesExpanded ({ ride }) {
 
     useEffect(() => {
         const fetchRides = async () => {
             try {
-                const response = await fetch("http://localhost:5000/submit_rides");
+                const response = await fetch(`http://localhost:5000/submit_rides/${rideId}`);
                 if (response.ok) {
                     const data = await response.json();
                     const ridesWithPlaceholders = data.map((ride) => {
@@ -46,10 +46,10 @@ function RidesExpanded() {
                     </div>
                 </div>
                 <div className="button">
-                    <button onClick={() => navigate(`/rides/${ride.id}/update`)}>
+                    <button onClick={() => navigate(`/rides/${rideId}/update`)}>
                         Update
                     </button>
-                    <form method="POST" action={`/rides/${ride.id}/?_method=DELETE`}>
+                    <form method="POST" action={`/rides/${rideId}/?_method=DELETE`}>
                     <button>Delete</button>
                     </form>
                 </div>
