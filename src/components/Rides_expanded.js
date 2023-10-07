@@ -46,7 +46,9 @@ function RidesExpanded() {
                     </div>
                 </div>
                 <div className="button">
-                    <button onClick={() => navigate(`/rides/${ride.id}/update`)} >Update</button>
+                    <button onClick={() => navigate(`/rides/${ride.id}/update`)}>
+                        Update
+                    </button>
                     <form method="POST" action={`/rides/${ride.id}/?_method=DELETE`}>
                     <button>Delete</button>
                     </form>
