@@ -15,7 +15,7 @@ export default function AboutCard(props) {
         <div style={cardStyle}>
             <span>{props.AboutEvents}</span>
             <div style={{ height: "10px", textAlign: "center" }}>{props.date}</div>
-            <img src={props.imageURL} alt="" style={{ height: "100px", textAlign: "center", margin: '17px' }} />
+            <img src={props.imageURL} alt={props.imageAlt} style={{ height: "100px", textAlign: "center", margin: '17px' }} />
             <div style={{ fontWeight: "bold", width: "100%", textAlign: "center" }}>{props.location}</div>
             <div style={{ width: "100%", textAlign: "center" }}>{props.paragraph}</div>
         </div>
