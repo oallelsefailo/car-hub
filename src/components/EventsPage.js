@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { EventDates } from "./EventDates";
@@ -6,8 +6,34 @@ import Card from "./Card";
 import { useNavigate } from "react-router-dom";
 
 export default function EventsPage (props) {
-    
+
     const navigate= useNavigate();
+
+    const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/add_event");
+        if (response.ok) {
+          const data = await response.json();
+          const eventsWithPlaceholders = data.map((event) => {
+            if (!event.photo) {
+              return { ...event, photo: "https://placekitten.com/200/200" };
+            }
+            return event;
+          });
+          setEvents(eventsWithPlaceholders);
+        } else {
+          console.error("Failed to fetch events");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchEvents();
+  }, []);
 
     return (
         <><div style= {{display: "flex", flexWrap: "wrap"}}> 
