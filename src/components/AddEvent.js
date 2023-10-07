@@ -77,7 +77,7 @@ export default function AddEvent () {
                     <input  className="add-event-button" 
                             type="submit" 
                             value="Add Event" 
-                            onSubmit={handleSubmit} />
+                            onClick={handleSubmit} />
             </form>
             <div className='add-event-button'>
                     <a href= "/events">

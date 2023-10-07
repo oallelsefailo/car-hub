@@ -1,9 +1,9 @@
 const express = require("express");
-const router = require('express').Router();
+const eventsrouter = require('express').Router();
 const eventsSchemas = require("../models/EventsSchema");
 
 // POST Event
-router.post("/", async (req, res) => {
+router.post("/add_event", async (req, res) => {
   try {
     const { imageURL, eventName,location, date } =
       req.body;
@@ -20,10 +20,10 @@ router.post("/", async (req, res) => {
 });
 
 // GET event
-router.get("/", async (req, res) => {
+router.get("/add_event", async (req, res) => {
   try {
     const event = await eventsSchemas.EventsPage.find();
-    res.status(200).json(events);
+    res.status(200).json(eventsSchemas);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error" });

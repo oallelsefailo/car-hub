@@ -19,7 +19,7 @@ export default function EventsPage (props) {
           const data = await response.json();
           const eventsWithPlaceholders = data.map((event) => {
             if (!event.photo) {
-              return { ...event, photo: "https://placekitten.com/200/200" };
+              return { ...events, photo: "https://placekitten.com/200/200" };
             }
             return event;
           });

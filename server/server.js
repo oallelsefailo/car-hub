@@ -22,7 +22,7 @@ app.use(cors(corsOptions));
 
 app.use("/submit_rides", router);
 
-app.use("/add_event", eventsrouter);
+app.use("/add_event", require("./routes/add_events"));
 
 const dbOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 mongoose.connect(process.env.MONGO_URI, dbOptions);
