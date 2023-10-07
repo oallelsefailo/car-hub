@@ -47,7 +47,7 @@ function Rides() {
               console.error("Failed to post ride");
             }
           } catch (error) {
-            console.error(error);
+            console.error("Error:", error);
           }
         };
 
@@ -55,10 +55,10 @@ function Rides() {
         <div>
             <main>
                 <h1>Rides</h1>
-                <form method="POST" action="/rides">
+                <form method="POST" action='/rides'>
                     <div>
                         <label>Photos: </label>
-                        <input id='photos' name='photos' value= {photo} onChange={ (e)=> setPhoto(e.target.value)} />
+                        <input id='photos' name='photo' value= {photo} onChange={ (e)=> setPhoto(e.target.value)} />
                     </div>
                     <div>
                         <label>Brand: </label>
@@ -88,8 +88,9 @@ function Rides() {
                         <label>Owner: </label>
                         <input id='owner' name='owner' value= {owner} onChange={ (e)=> setOwner(e.target.value)} required />
                     </div>
+                    <input type="submit" onClick={handleSubmit} />
                 </form>
-                <input type="submit" onClick={handleSubmit} />
+                
             </main>
         </div>
     )

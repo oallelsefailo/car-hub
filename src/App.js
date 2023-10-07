@@ -6,6 +6,7 @@ import Rides from "./components/Rides";
 import Update from "./components/update"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddEvent from "./components/AddEvent";
+import EventsPage from "./components/EventsPage";
 
 function App() {
   return (

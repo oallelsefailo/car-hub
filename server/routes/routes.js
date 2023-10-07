@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const router = require('express').Router();
 const schemas = require("../models/schemas");
 
 // POST ride
@@ -42,11 +42,12 @@ router.get("/rides", async (req, res) => {
 // GET ride by ID
 router.get("/rides/:id", async (req, res) => {
   try {
-    const rideId = req.params.id;
-    res.status(200).json(rideData);
+      const rideId = req.params.id;
+      const rideData = await schemas.Rides.findById(rideId);
+      res.status(200).json(rideData);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error" });
+      console.error(error);
+      res.status(500).json({ error: "Error" });
   }
 });
 
@@ -54,12 +55,17 @@ router.get("/rides/:id", async (req, res) => {
 // UPDATE ride
 router.post("/:id/update", async (req, res) => {
   try {
-    const rideId = req.params.id;
-    const updatedRideData = req.body;
-    res.status(200).json(updatedRideData);
+      const rideId = req.params.id;
+      const updatedRideData = req.body;
+      const updatedRide = await schemas.Rides.findByIdAndUpdate(
+          rideId,
+          updatedRideData,
+          { new: true } // Return the updated ride
+      );
+      res.status(200).json(updatedRide);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error updating" });
+      console.error(error);
+      res.status(500).json({ error: "Error updating" });
   }
 });
 
