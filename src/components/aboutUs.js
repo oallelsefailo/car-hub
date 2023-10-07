@@ -26,13 +26,7 @@ export default function AboutEvents(props) {
             }
         </div>
             <div>
-                <p>Stay uo to date witht the Pit Crew of Car-Hub</p>
-            </div>
-
-            <div className="button">
-                <p>Check out Upcoming Events on our Events Page.</p>
-                <button onClick={() => navigate('/events/#')} >Head over to Events</button>
-                {/* <button>Delete Event</button> */}
+                <p>Page Created by: Manny</p>
             </div>
         </>
     );
