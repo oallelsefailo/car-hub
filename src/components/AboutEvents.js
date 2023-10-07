@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import { AboutDates } from "./AboutDates";
 import AboutCard from "./AboutCard";
 import { useNavigate } from "react-router-dom";

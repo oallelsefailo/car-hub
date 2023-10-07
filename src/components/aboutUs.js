@@ -3,7 +3,7 @@ import { AboutDates } from "./AboutDates";
 import AboutCard from "./AboutCard";
 import { useNavigate } from "react-router-dom";
 
-export default function AboutEvents(props) {
+function AboutUs(props) {
 
     const navigate = useNavigate();
 
@@ -29,3 +29,5 @@ export default function AboutEvents(props) {
         </>
     );
 }
+
+export default AboutUs;
