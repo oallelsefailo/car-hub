@@ -23,9 +23,6 @@ function AboutUs(props) {
                 />)
             }
         </div>
-            <div>
-                <p>Page Created by: Manny</p>
-            </div>
         </>
     );
 }

@@ -20,13 +20,13 @@ export const AboutDates = [
         paragraph: "Meet Jose, the speed demon and Supra aficionado, whose passion for Japanese engineering fuels his love for high-performance cars."
         //credit to petrolheadsauto.com for the picture//
     },
-    {
-        imageURL: 'Mclaren.png',
-        location: 'KJ',
-        imageAlt: "Unknown Car",
-        paragraph: "The speedster with an insatiable thirst for adrenaline, dominates the asphalt in his McLaren, redefining the art of automotive thrill."
-        //credit to motorious.com for the picture//
-    },
+    // {
+    //     imageURL: 'Mclaren.png',
+    //     location: 'KJ',
+    //     imageAlt: "Unknown Car",
+    //     paragraph: "The speedster with an insatiable thirst for adrenaline, dominates the asphalt in his McLaren, redefining the art of automotive thrill."
+    //     //credit to motorious.com for the picture//
+    // },
     {
         imageURL: 'ferrari.png',
         location: "ROMERO",

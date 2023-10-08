@@ -63,44 +63,47 @@ function RidesExpanded() {
   const navigate = useNavigate();
   return (
     <div>
-      <main>
-        <div className="car">
-          <img
-            id="carImg"
-            src={ride?.photo}
-            alt={`${ride?.brand} ${ride?.model}`}
-          />
-          <div className="car-data">
-            <h1>
-              {ride?.brand}
-              {ride?.model}
-            </h1>
-            <ul>
-              <li>
-                <b>Year:</b> {ride?.year}
-              </li>
-              <li>
-                <b>Type:</b> {ride?.type}{" "}
-              </li>
-              <li>
-                <b>Engine:</b> {ride?.engine}
-              </li>
-              <li>
-                <b>Drive Train:</b> {ride?.drivetrain}
-              </li>
-              <li>
-                <b>Owner:</b> {ride?.owner}
-              </li>
-            </ul>
-          </div>
+      <div className="car">
+        <img
+          id="carImg"
+          src={ride?.photo}
+          alt={`${ride?.brand} ${ride?.model}`}
+        />
+        <div className="car-data">
+          <h1>
+            {ride?.brand}&nbsp;
+            {ride?.model}
+          </h1>
+          <ul>
+            <li>
+              <b>Year:</b> {ride?.year}
+            </li>
+            <li>
+              <b>Type:</b> {ride?.type}{" "}
+            </li>
+            <li>
+              <b>Engine:</b> {ride?.engine}
+            </li>
+            <li>
+              <b>Drive Train:</b> {ride?.drivetrain}
+            </li>
+            <li>
+              <b>Owner:</b> {ride?.owner}
+            </li>
+          </ul>
         </div>
-        <div className="button">
-          <button onClick={() => navigate(`/rides/update/${id}`)}>
-            Update
-          </button>
-          <button onClick={() => handleDelete()}>Delete</button>
-        </div>
-      </main>
+      </div>
+      <input
+        type="submit"
+        value="Update"
+        onClick={() => navigate(`/rides/update/${id}`)}
+      />
+      &nbsp;
+      <input
+        type="submit"
+        value="Delete"
+        onClick={() => handleDelete()}
+      />
     </div>
   );
 }

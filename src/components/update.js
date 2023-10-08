@@ -1,4 +1,5 @@
 import React from "react";
+import "./submitrides.css";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -61,81 +62,87 @@ function Update() {
   };
 
   return (
-    <div>
-      <main>
-        <form>
+    <div className="submit-container">
+      <h1>Update Ride</h1>
+      <form>
+        <div className="label-input-group">
           <label>Brand:</label>
-          <br />
           <input
             type="text"
             id="brand"
             name="brand"
             value={ride.brand}
             onChange={(e) => setRide({ ...ride, brand: e.target.value })}
-          ></input>
-          <br />
+          />
+        </div>
+        <div className="label-input-group">
           <label>Model:</label>
-          <br />
           <input
-            type="model"
+            type="text"
             id="model"
             name="model"
             value={ride.model}
             onChange={(e) => setRide({ ...ride, model: e.target.value })}
-          ></input>
-          <br />
+          />
+        </div>
+        <div className="label-input-group">
           <label>Year:</label>
-          <br />
           <input
             type="text"
             id="year"
             name="year"
             value={ride.year}
             onChange={(e) => setRide({ ...ride, year: e.target.value })}
-          ></input>
-          <br />
+          />
+        </div>
+        <div className="label-input-group">
           <label>Type:</label>
-          <br />
           <input
             type="text"
             id="type"
             name="type"
             value={ride.type}
             onChange={(e) => setRide({ ...ride, type: e.target.value })}
-          ></input>
-          <br />
+          />
+        </div>
+        <div className="label-input-group">
           <label>Drive Train:</label>
-          <br />
           <input
             type="text"
             id="driveTrain"
             name="driveTrain"
             value={ride.drivetrain}
             onChange={(e) => setRide({ ...ride, drivetrain: e.target.value })}
-          ></input>
-          <br />
+          />
+        </div>
+        <div className="label-input-group">
           <label>Owner:</label>
-          <br />
           <input
             type="text"
             id="owner"
             name="owner"
             value={ride.owner}
             onChange={(e) => setRide({ ...ride, owner: e.target.value })}
-          ></input>
-          <br />
+          />
+        </div>
+        <div className="label-input-group">
           <label>What makes your car Special:</label>
-          <br />
-          <input
-            type="text"
+          <textarea
             id="description"
             name="description"
-            style={{ height: "100px", width: "20%", marginBottom: "10px" }}
-          ></input>
-          <br />
-        </form>
-        <button onClick={() => handleUpdateCar()}>Update</button>
-      </main>
+            value={ride.description}
+            onChange={(e) => setRide({ ...ride, description: e.target.value })}
+            style={{ height: "100px", width: "100%", marginBottom: "10px" }}
+          />
+        </div>
+        <button
+          type="button"
+          onClick={() => handleUpdateCar()}
+          className="submit-button"
+        >
+          Update
+        </button>
+      </form>
     </div>
   );
 }

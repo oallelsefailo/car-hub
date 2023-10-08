@@ -1,6 +1,5 @@
 import React from "react";
 import "./container.css";
-import { Link } from "react-router-dom";
 import iconOne from "../assets/icons/icon1.JPG";
 import iconTwo from "../assets/icons/icon2.JPG";
 import iconThree from "../assets/icons/icon3.JPG";
