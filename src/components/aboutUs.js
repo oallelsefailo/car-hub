@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutDates } from "./AboutDates";
+import { AboutDates } from "./aboutDates";
 import AboutCard from "./AboutCard";
 import { useNavigate } from "react-router-dom";
 

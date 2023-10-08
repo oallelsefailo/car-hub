@@ -8,7 +8,7 @@ export default function AboutCard(props) {
         height: "250px",
         margin: "15px",
         boxShadow: "0px 0px 5px #000000",
-        padding: "20px" // Add padding as needed (e.g., 20px)
+        padding: "20px" 
     };
 
     return (
