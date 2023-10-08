@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function RidesExpanded ({ ride }) {
+    const [rides, setRides] = useState([]);
 
     useEffect(() => {
         const fetchRides = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/submit_rides/${rideId}`);
+                const response = await fetch(`http://localhost:5000/submit_rides/${ride.id}`);
                 if (response.ok) {
                     const data = await response.json();
                     const ridesWithPlaceholders = data.map((ride) => {
@@ -32,6 +33,7 @@ function RidesExpanded ({ ride }) {
     return (
         <div>
             <main>
+            {rides.map((ride) => (
                 <div className="car">
                     <img id="carImg" src={ride.photo} alt={`${ride.brand} ${ride.model}`} />
                     <div className="car-data">
@@ -44,12 +46,12 @@ function RidesExpanded ({ ride }) {
                             <li><b>Owner:</b> {ride.owner}</li>
                         </ul>
                     </div>
-                </div>
+                </div>))}
                 <div className="button">
-                    <button onClick={() => navigate(`/rides/${rideId}/update`)}>
+                    <button onClick={() => navigate(`/rides/${ride.id}/update`)}>
                         Update
                     </button>
-                    <form method="POST" action={`/rides/${rideId}/?_method=DELETE`}>
+                    <form method="POST" action={`/rides/${ride.id}/?_method=DELETE`}>
                     <button>Delete</button>
                     </form>
                 </div>
