@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const router = require('express').Router();
 const schemas = require("../models/schemas");
 
 // POST ride
@@ -49,8 +49,8 @@ router.get("/:id", async (req, res) => {
     }
     res.status(200).json(ride);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error" });
+      console.error(error);
+      res.status(500).json({ error: "Error" });
   }
 });
 
@@ -74,8 +74,8 @@ router.post("/update/:id", async (req, res) => {
     );
     res.status(200).json(updatedRide);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error updating" });
+      console.error(error);
+      res.status(500).json({ error: "Error updating" });
   }
 });
 

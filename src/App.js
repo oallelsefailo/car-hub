@@ -9,6 +9,8 @@ import RidesExpanded from "./components/RidesExpanded";
 import AboutUs from "./components/aboutUs";
 import AboutEvents from "./components/AboutEvents";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AddEvent from "./components/AddEvent";
+import EventsPage from "./components/EventsPage";
 
 
 function App() {
@@ -24,8 +26,8 @@ function App() {
           <Route path="/rides/submit" element={<SubmitRides />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/about/events" element={<AboutEvents />} />
-          {/*<Route path="/events" element={<Events />} />
-           */}
+          <Route path="/events" element={<EventsPage />} />
+          <Route path='/events/AddEvent' element={<AddEvent />} />
         </Routes>
         <Footer />
       </div>

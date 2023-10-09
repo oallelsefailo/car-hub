@@ -1,0 +1,11 @@
+.add-event-button {
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+.add-event-div {
+    margin: 50px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}

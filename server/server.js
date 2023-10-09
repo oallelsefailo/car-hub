@@ -5,6 +5,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const router = require("./routes/submit_rides");
+const eventsrouter= require("./routes/add_event");
 
 const app = express();
 
@@ -20,6 +21,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use("/submit_rides", router);
+
+app.use("/add_event", require("./routes/add_events"));
 
 const dbOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 mongoose.connect(process.env.MONGO_URI, dbOptions);
