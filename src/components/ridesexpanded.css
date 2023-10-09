@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 20px;
+}
+
+.car {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 350px; 
+}
+
+#carImg {
+  max-width: 375px;
+  max-height: 270px;
+  min-width: 100px; 
+  min-height: 100px;
+  margin-right: 20px;
+}
+
+.car-data {
+  text-align: left;
+}
+
+.car-data h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.car-data ul {
+  list-style: none;
+  padding: 0;
+}
+
+.car-data ul li {
+  margin-bottom: 8px;
+}

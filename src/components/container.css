@@ -86,7 +86,7 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 55vh;
+  height: 55vh !important;
   padding: 20px;
   margin: 10px;
   border: 1px solid #1c2129;

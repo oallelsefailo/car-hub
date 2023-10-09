@@ -36,14 +36,14 @@ function Rides() {
         {rides.map((ride) => (
           <li className="ride-item" key={ride._id}>
             <Link to={`/rides/${ride._id}`} className="navLink">
-            <img src={ride.photo} alt={`${ride.brand} ${ride.model}`} />
-            <p>Brand: {ride.brand}</p>
-            <p>Model: {ride.model}</p>
-            <p>Year: {ride.year}</p>
-            <p>Type: {ride.type}</p>
-            <p>Engine: {ride.engine}</p>
-            <p>Drivetrain: {ride.drivetrain}</p>
-            <p>Owner: {ride.owner}</p>
+              <img src={ride.photo} alt={`${ride.brand} ${ride.model}`} />
+              <p>Brand: {ride.brand}</p>
+              <p>Model: {ride.model}</p>
+              <p>Year: {ride.year}</p>
+              <p>Type: {ride.type}</p>
+              <p>Engine: {ride.engine}</p>
+              <p>Drivetrain: {ride.drivetrain}</p>
+              <p>Owner: {ride.owner}</p>
             </Link>
           </li>
         ))}

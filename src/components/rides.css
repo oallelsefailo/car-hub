@@ -10,7 +10,6 @@ body {
 
 .rides-list {
   list-style: none;
-  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
   gap: 20px;
@@ -18,7 +17,7 @@ body {
 
 .ride-item {
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
 }
@@ -29,7 +28,7 @@ body {
 
 .ride-item img {
   width: 100%;
-  height: auto;
+  height: 45%;
   border-radius: 8px;
   margin-bottom: 10px;
 }

@@ -55,12 +55,21 @@ router.get("/:id", async (req, res) => {
 });
 
 // UPDATE ride
-router.post("/:id/update", async (req, res) => {
+router.post("/update/:id", async (req, res) => {
+  const { brand, model, year, type, drivetrain, owner, engine } = req.body;
   try {
     const rideId = req.params.id;
-    const updatedRide = await schemas.Rides.findByIdAndUpdate(
-      rideId,
-      updatedRideData,
+    const updatedRide = await schemas.Rides.findOneAndUpdate(
+      { _id: rideId },
+      {
+        brand,
+        model,
+        year,
+        type,
+        engine,
+        drivetrain,
+        owner,
+      },
       { new: true }
     );
     res.status(200).json(updatedRide);
@@ -71,9 +80,10 @@ router.post("/:id/update", async (req, res) => {
 });
 
 //DELETE ride
-router.delete("/:id", async (req, res) => {
+router.delete("/delete/:id", async (req, res) => {
   try {
     const rideId = req.params.id;
+    await schemas.Rides.findOneAndDelete({ _id: rideId });
     res.status(200).json({ message: "Ride deleted" });
   } catch (error) {
     console.error(error);
