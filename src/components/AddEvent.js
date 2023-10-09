@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, } from "react";
 import "./eventsUpdateDelete.css"
 
 export default function AddEvent () {
@@ -12,7 +12,7 @@ export default function AddEvent () {
         const handleSubmit = async (e) => {
           e.preventDefault();
           try {
-            const response = await fetch("http://localhost:5000/add_event", {
+            const response = await fetch("http://localhost:5000/add_events", {
               method: "POST",
               headers: {
                 Accept: "application/json",
@@ -22,6 +22,7 @@ export default function AddEvent () {
                 eventName,
                 imageURL,
                 location,
+                date
               }),
             });
       
