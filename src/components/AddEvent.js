@@ -63,6 +63,7 @@ export default function AddEvent () {
                     <input  type="url" 
                             id="imageURL" 
                             name="imageURL" 
+                            placeholder="Only URLs"
                             value={imageURL}
                             onChange={(e) => setImageURL(e.target.value)}
                             /> <br />
