@@ -1,5 +1,5 @@
 const express = require("express");
-const eventsrouter = require('express').Router();
+const eventsRouter = require('express').Router();
 const eventsSchemas = require("../models/EventsSchema");
 
 // POST Event
