@@ -28,6 +28,14 @@ Check in on news and sweepstakes!
 - MongoDB
 - Express
 
+## Resources
+- Rest Rant Project
+- Backend server set up - https://www.youtube.com/watch?v=RHLxtAo0aEI&t=127s
+- Mongo DB documentation - https://www.mongodb.com/docs/atlas/getting-started/
+- Vercel Documentation - https://vercel.com/docs
+- React documentation - https://legacy.reactjs.org/docs/getting-started.html
+
+
 ## Contributors
 - [Oscar Romero](https://github.com/oromero7153)
 - [Jose Rodrigues](https://github.com/jorodrig96)
