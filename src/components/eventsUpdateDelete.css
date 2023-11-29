@@ -1,11 +1,36 @@
+.AddEventInputs {
+  border: dashed;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.whole-body {
+  background-color: #dde3e9;
+  font-size: large;
+}
+
 .add-event-button {
-    margin: 5px;
-    margin-bottom: 20px;
+  margin: 5px;
+  margin-bottom: 20px;
+  background-color: #6a6a6b;
+  color: #bfd0d9;
 }
 
 .add-event-div {
-    margin: 50px;
-    width: 100%;
-    justify-content: center;
-    display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background-color: #dde3e9;
+  color: #111111;
+  font-size: x-large;
 }
+
+.button p {
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=eventsUpdateDelete.css.map */

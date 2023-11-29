@@ -134,7 +134,12 @@ function SubmitRides() {
             required
           />
         </div>
+        <div className="submitRidesBackButton">
         <input type="submit" value="Submit Query" onClick={handleSubmit} />
+          </div>
+        <div className="submitRidesBackButton" > < a href= "/rides" />
+        <button>Let me see my ride!</button>
+      </div>
       </form>
     </div>
   );

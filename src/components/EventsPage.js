@@ -36,9 +36,11 @@ export default function EventsPage (props) {
   }, []);
 
     return (
-        <><div style= {{display: "flex", flexWrap: "wrap"}}> 
+        <>
+        <div className="whole-body">
+        <div style= {{display: "flex", flexWrap: "wrap"}}> 
             {EventDates.map((element, index) =>
-            <Card  
+            <Card 
             key= {index} 
             imageURL= {element.imageURL} 
             eventName={element.eventName} 
@@ -55,6 +57,7 @@ export default function EventsPage (props) {
             <p>You can also add your own events here!</p>
                 <button className= "add-event-button" onClick={() => navigate('/events/AddEvent')} >Add Event</button>
                 <button className="add-event-button">Delete Event</button>
+        </div>
         </div>
         </>
     );

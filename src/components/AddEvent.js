@@ -81,7 +81,7 @@ export default function AddEvent () {
                             value="Add Event" 
                             onClick={handleSubmit} />
             </form>
-            <div className='add-event-button'>
+            <div className='event-back-button'>
                     <a href= "/events">
                         <button>Back</button>
                         </a>
