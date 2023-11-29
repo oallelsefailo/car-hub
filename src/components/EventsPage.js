@@ -49,7 +49,7 @@ export default function EventsPage (props) {
             />)
         }
         </div>
-        <div>
+        <div className="stay-up-to-date">
             <p>Stay up to date with events! New events will be added soon!</p>
         </div>
 

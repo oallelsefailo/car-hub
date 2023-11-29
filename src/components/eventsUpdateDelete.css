@@ -33,4 +33,21 @@
   font-weight: 700;
 }
 
+.stay-up-to-date p {
+  font-weight: 700;
+}
+
+.AddEventInputs label {
+  font-size: xx-large;
+}
+.AddEventInputs input {
+  padding: 10px;
+  border: solid;
+  font-size: large;
+}
+
+.event-back-button a button {
+  color: #bfd0d9;
+}
+
 /*# sourceMappingURL=eventsUpdateDelete.css.map */

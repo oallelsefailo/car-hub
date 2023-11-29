@@ -1,14 +1,3 @@
-// When looking at the SCSS file, it should successfully incorporate the following:
-// 10-15 nested selectors, with at least 2 uses of the SCSS ampersand (&)
-// 3-5 SCSS mixins
-// 2-4 SCSS functions
-// 2-4 instances of SCSS flow control directives or operators
-// 3-5 SCSS partial files, imported
-// One of the SCSS error-handling directives
-// When SCSS compiles to CSS, there are no errors in the console.
-// Styling has been completed using SCSS only.
-
-
 $page-background: #dde3e9;
 $button-color: #6a6a6b;
 $button-font-color: #bfd0d9;  
@@ -19,44 +8,95 @@ $word-size: x-large;
 $add-event-border: dashed;
 $add-event-border-left-space: 200px;
 $add-event-border-right-space: 200px;
+$add-event-button-padding: 10px;
+$add-event-input-font-size: large;
+$add-event-font-size: xx-large;
 $whole-body-font-size: large;
 $whole-body-p-size: 700;
- 
+$debug-mode: true; // if you switch to false it turns off the debug output.
+
+//function defined but i dont see a use for it right now. just including for assignment
+@function adjust-brightness($color, $percentage) {
+    @return adjust-color($color, $amount: $percentage);
+  } 
+
+@debug $button-color;
+@debug $top-space;
+@debug $button-font-color;
+@debug $word-size;
+@debug $add-event-border;
+@debug $whole-body-p-size;
+
+@mixin debug-message($message) {
+  @if $debug-mode {
+    @debug "Debug Mode: #{$message}";
+  }
+}
+
 .AddEventInputs {
-    border: $add-event-border;
-    padding-top: $top-space;
-    padding-bottom: $bottom-space;
-    padding-left: $add-event-border-left-space;
-    padding-right: $add-event-border-right-space;
+  border: $add-event-border;
+  padding-top: $top-space;
+  padding-bottom: $bottom-space;
+  padding-left: $add-event-border-left-space;
+  padding-right: $add-event-border-right-space;
 }
 
 .whole-body {
-    background-color: $page-background;
-    font-size: $whole-body-font-size;
+  background-color: $page-background;
+  font-size: $whole-body-font-size;
 }
 
-
 .add-event-button {
-    margin: 5px;
-    margin-bottom: 20px;
-    background-color: $button-color;
-    color: $button-font-color;
+  margin: 5px;
+  margin-bottom: 20px;
+  background-color: $button-color;
+  color: $button-font-color;
+  
+  @include debug-message("add-event-button class styling");
 }
 
 .add-event-div {
-    padding-top: $top-space;
-    padding-bottom: $bottom-space;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    background-color: $page-background;
-    color: $add-event-div-font-color;
-    font-size: $word-size;
+  padding-top: $top-space;
+  padding-bottom: $bottom-space;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background-color: $page-background;
+  color: $add-event-div-font-color;
+  font-size: $word-size;
+  
+  @include debug-message("add-event-div class styling");
 }
 
 .button {
-    p {
-     font-weight: $whole-body-p-size;
-    }
+  p {
+    @include debug-message("paragraph inside .button class styling");
+    font-weight: $whole-body-p-size;
+  }
 }
 
+.stay-up-to-date {
+  p {
+    @include debug-message("stay-up-to-date class styling");
+    font-weight: $whole-body-p-size;
+  }
+}
+
+.AddEventInputs {
+  label {
+    font-size: $add-event-font-size;
+  }
+  input {
+    padding: $add-event-button-padding;
+    border: solid;
+    font-size: $add-event-input-font-size;
+  }
+}
+
+.event-back-button {
+  a {
+    button {
+      color: $button-font-color;
+    }
+  }
+}
