@@ -41,7 +41,7 @@ If that issue arises, follow these stepes:
 1. Go to your system settings. 
 2. Click on General, then AirDrop & Handoff.
 3. Turn off Airplay Receiver. 
--  [Resource] (https://stackoverflow.com/questions/72369320/why-always-something-is-running-at-port-5000-on-my-mac)
+-  [Resource](https://stackoverflow.com/questions/72369320/why-always-something-is-running-at-port-5000-on-my-mac)
 
 ## Contributors
 - [Oscar Romero](https://github.com/oromero7153)
