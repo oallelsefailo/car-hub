@@ -1,7 +1,8 @@
 # Welcome to CarHub
 ## MERN Carhub Application
 
-! [ CarHub Logo] (/src/assets/icons/ch-logo.png)
+![ CarHub Logo](/src/assets/icons/ch-logo.png)
+
 
 ## About Carhub
 
