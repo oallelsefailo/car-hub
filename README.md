@@ -32,7 +32,7 @@ Check in on news & sweepstakes! :checkered_flag:
 
 
 ## Contributors :technologist:
-- [Oscar Romero](https://github.com/oromero7153)
-- [Jose Rodrigues](https://github.com/jorodrig96)
-- [Manny Delgado](https://github.com/MannyGDP)
-- [Brandon Iida](https://github.com/oallelsefailo)
+- [Oscar Romero](https://github.com/oromero7153) :scientist:
+- [Jose Rodrigues](https://github.com/jorodrig96) :scientist: 
+- [Manny Delgado](https://github.com/MannyGDP) :scientist:
+- [Brandon Iida](https://github.com/oallelsefailo) :scientist:
