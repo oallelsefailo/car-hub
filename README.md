@@ -6,11 +6,9 @@
 
 ## About Carhub
 
-
-
 Carhub is a social media site for cars. 
 Show off your car and become featured. 
-Check in on news and sweepstakes!
+Check in on news and sweepstakes! :checkered_flag:
 
 ## Features
 
@@ -22,15 +20,15 @@ Check in on news and sweepstakes!
 
 ## Technologies Used
 
-### Frontend
-- React
-- HTML/CSS
-- JavaScript
+### Frontend :wrench:
+- React :test_tube:
+- HTML/CSS :test_tube:
+- JavaScript :test_tube:
 
-### Backend
-- Node.js
-- MongoDB
-- Express
+### Backend :wrench:
+- Node.js :test_tube:
+- MongoDB :test_tube:
+- Express :test_tube:
 
 ## Contributors
 - [Oscar Romero](https://github.com/oromero7153)
