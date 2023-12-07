@@ -18,6 +18,12 @@ Check in on news & sweepstakes! :checkered_flag:
 
 - https://car-hub-three-zeta.vercel.app
 
+
+## Endpoints 
+
+- For the rides page, youll be able to upload your own car.
+- For the events page, youll be able to create your own event. 
+
 ## Technologies Used
 
 ### Frontend :wrench:
