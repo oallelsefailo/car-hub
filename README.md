@@ -1,8 +1,11 @@
-# MERN Carhub Application
+# Welcome to CarHub
+## MERN Carhub Application
 
-Welcome to Carhub! 
+! [ CarHub Logo] (/src/assets/icons/ch-logo.png)
 
 ## About Carhub
+
+
 
 Carhub is a social media site for cars. 
 Show off your car and become featured. 
