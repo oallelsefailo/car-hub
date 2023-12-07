@@ -8,7 +8,7 @@
 
 Carhub is a social media site for cars. 
 Show off your car and become featured. 
-Check in on news and sweepstakes! :checkered_flag:
+Check in on news & sweepstakes! :checkered_flag:
 
 ## Features
 
@@ -30,7 +30,8 @@ Check in on news and sweepstakes! :checkered_flag:
 - MongoDB :test_tube:
 - Express :test_tube:
 
-## Contributors
+
+## Contributors :technologist:
 - [Oscar Romero](https://github.com/oromero7153)
 - [Jose Rodrigues](https://github.com/jorodrig96)
 - [Manny Delgado](https://github.com/MannyGDP)
