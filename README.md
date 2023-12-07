@@ -16,7 +16,7 @@ Check in on news & sweepstakes! :checkered_flag:
 
 ## How to Use
 
-- car-hub-staging.vercel.app
+- https://car-hub-three-zeta.vercel.app
 
 ## Technologies Used
 
